@@ -22,7 +22,12 @@ public class PaymentService {
     private PaymentRepository repository;
 
     public Payment doPayment(Payment payment) {
+        payment.setPaymentStatus(paymentProcessing());
         payment.setTransationId(UUID.randomUUID().toString());
         return repository.save(payment);
+    }
+
+    public String paymentProcessing() {
+        return new Random().nextBoolean()?"success":"false";
     }
 }

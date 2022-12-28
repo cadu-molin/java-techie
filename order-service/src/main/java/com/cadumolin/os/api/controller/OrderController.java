@@ -5,7 +5,8 @@ package com.cadumolin.os.api.controller;
  * date: 20/12/2022
  */
 
-import com.cadumolin.os.api.entity.Order;
+import com.cadumolin.os.api.common.TransactionRequest;
+import com.cadumolin.os.api.common.TransactionResponse;
 import com.cadumolin.os.api.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -21,7 +22,7 @@ public class OrderController {
     private OrderService service;
 
     @PostMapping("/orders")
-    public Order bookOrder(@RequestBody Order order) {
-        return service.saveOrder(order);
+    public TransactionResponse bookOrder(@RequestBody TransactionRequest request) {
+        return null;
     }
 }
