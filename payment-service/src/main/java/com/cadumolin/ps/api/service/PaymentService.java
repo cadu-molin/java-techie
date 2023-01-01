@@ -2,8 +2,6 @@ package com.cadumolin.ps.api.service;
 
 import com.cadumolin.ps.api.entity.Payment;
 import com.cadumolin.ps.api.repository.PaymentRepository;
-import jakarta.persistence.EntityManager;
-import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
